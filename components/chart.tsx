@@ -126,7 +126,7 @@ export default function Chart() {
   return (
     <div className="w-full p-12">
       <AreaChart
-        width={1200}
+        width={1400}
         height={500}
         data={historicalData}
         margin={{
@@ -158,7 +158,9 @@ export default function Chart() {
           animationDuration={1000}
         />
       </AreaChart>
-      <p className="text-yellow-700">SYMBOL: ${symbol}</p>
+      <p className="text-yellow-700" contentEditable={true}>
+        SYMBOL: {symbol}
+      </p>
       <p className="text-yellow-500">
         Realtime Price: ${realtimePrice.toFixed(4)}
       </p>
